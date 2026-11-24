@@ -165,6 +165,7 @@
   });
 
   document.addEventListener("keydown", function (event) {
+    if (event.target.closest && event.target.closest("#tetris")) return;
     var key = event.key;
     if (key >= "0" && key <= "9") {
       inputDigit(key);

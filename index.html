@@ -56,6 +56,36 @@
     </footer>
   </main>
 
+  <aside class="tetris" id="tetris" tabindex="0" aria-label="俄罗斯方块">
+    <div class="tetris-head">
+      <p>俄罗斯方块</p>
+      <div class="tetris-actions">
+        <button type="button" id="tetris-toggle">开始</button>
+        <button type="button" id="tetris-fold" aria-label="收起">–</button>
+      </div>
+    </div>
+    <p class="tetris-status" id="tetris-status">点击开始</p>
+    <div class="tetris-body">
+      <canvas id="tetris-board" width="120" height="240" aria-hidden="true"></canvas>
+      <div class="tetris-side">
+        <p class="tetris-label">下一个</p>
+        <canvas id="tetris-next" width="48" height="48" aria-hidden="true"></canvas>
+        <p class="tetris-label">分数</p>
+        <p class="tetris-score" id="tetris-score">0</p>
+        <p class="tetris-label">行数</p>
+        <p class="tetris-score" id="tetris-lines">0</p>
+      </div>
+    </div>
+    <div class="tetris-controls" id="tetris-controls">
+      <button type="button" data-move="left" aria-label="左移">←</button>
+      <button type="button" data-move="rotate" aria-label="旋转">↻</button>
+      <button type="button" data-move="right" aria-label="右移">→</button>
+      <button type="button" data-move="down" aria-label="下落">↓</button>
+      <button type="button" class="tetris-drop" data-move="drop">直落</button>
+    </div>
+  </aside>
+
   <script src="script.js"></script>
+  <script src="tetris.js"></script>
 </body>
 </html>
