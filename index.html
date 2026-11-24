@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>微 · 个人网站</title>
+  <meta name="description" content="微的个人网站，内含一个用 HTML、CSS 和 JS 写成的计算器。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <p class="eyebrow">个人网站</p>
+      <h1>你好</h1>
+      <p>
+        产品经理。这个页面只用 HTML、CSS 和 JavaScript 写成，
+        下面这个计算器可以加减乘除，也可以用键盘输入。
+      </p>
+    </header>
+
+    <section class="calculator" aria-label="计算器">
+      <div class="screen">
+        <p class="expression" id="expression" aria-hidden="true"></p>
+        <output class="display" id="display" for="keys">0</output>
+      </div>
+
+      <div class="keys" id="keys">
+        <button type="button" class="key key-fn" data-action="clear">C</button>
+        <button type="button" class="key key-fn" data-action="sign">±</button>
+        <button type="button" class="key key-fn" data-action="back" aria-label="退格">←</button>
+        <button type="button" class="key key-op" data-action="op" data-value="/">÷</button>
+
+        <button type="button" class="key" data-action="digit" data-value="7">7</button>
+        <button type="button" class="key" data-action="digit" data-value="8">8</button>
+        <button type="button" class="key" data-action="digit" data-value="9">9</button>
+        <button type="button" class="key key-op" data-action="op" data-value="*">×</button>
+
+        <button type="button" class="key" data-action="digit" data-value="4">4</button>
+        <button type="button" class="key" data-action="digit" data-value="5">5</button>
+        <button type="button" class="key" data-action="digit" data-value="6">6</button>
+        <button type="button" class="key key-op" data-action="op" data-value="-">−</button>
+
+        <button type="button" class="key" data-action="digit" data-value="1">1</button>
+        <button type="button" class="key" data-action="digit" data-value="2">2</button>
+        <button type="button" class="key" data-action="digit" data-value="3">3</button>
+        <button type="button" class="key key-op" data-action="op" data-value="+">+</button>
+
+        <button type="button" class="key key-zero" data-action="digit" data-value="0">0</button>
+        <button type="button" class="key" data-action="dot">.</button>
+        <button type="button" class="key key-eq" data-action="eq">=</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year">2026</span> 微 · HTML / CSS / JS</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
